@@ -1,0 +1,11 @@
+ipykernel
+numpy>=1.25.2
+h5py>=3.9.0
+scipy>=1.13.0
+psutil>=5.9.0
+astropy>=6.1.0
+pynufft==2024.1.2
+onnx2torch>=1.5.14
+ptwt>=0.1.9
+torchkbnufft>=1.4.0
+pytorch-finufft==0.1.0

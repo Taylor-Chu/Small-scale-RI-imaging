@@ -1,0 +1,52 @@
+# Mac
+**/.DS_Store
+
+# Windows
+Thumbs.db
+
+# WebStorm
+.idea/
+
+# vi
+*~
+
+# General
+logs/
+*.log
+*.err
+*.out
+
+# Python
+**/__pycache__/
+*.py[cod]
+*.ipynb
+
+# Data
+*.mat
+*.fits
+*.zip
+*.tar.gz
+*.pdf
+*.png
+*.txt
+*.onnx
+*.csv
+*.json
+
+# WSCLEAN
+*.MS
+
+# MATLAB
+*.asv
+*.prf
+*.p12
+*.pem
+
+# Exception
+!airi_denoisers/shelf*.csv
+!data/3c353_gdth.fits
+!data/3c353_meas_dt_1_seed_0.mat
+!config/example.json
+!requirements.txt
+!tutorial_airi_python.ipynb
+!tutorial_usara_python.ipynb
