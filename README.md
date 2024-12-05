@@ -32,9 +32,6 @@ The details of these algorithms are discussed in the following papers.
 >
 >[3] Terris, M., Tang, C., Jackson, A., & Wiaux, Y., [The AIRI plug-and-play algorithm for image reconstruction in radio-interferometry: variations and robustness](https://arxiv.org/abs/2312.07137v3), 2024, *preprint arXiv:2312.07137v3.* 
 
-We provide a [tutorial](./tutorial_usara_matlab.mlx) in the format of MATLAB live script as a quick start guide about how to run the scripts in this repository, from setting up the environment to imaging RI measurements. It can also be viewed online [here](https://basp-group.github.io/BASPLib/uSARA_tutorial.html).
-
-
 We provide tutorials in the format of Jupyter notebook for both AIRI and uSARA as a quick start guide about how to run the scripts of this repository.
 
 We also point the readers to [AIRI](https://github.com/basp-group/AIRI) and [uSARA](https://github.com/basp-group/uSARA) repositories for their MATLAB implementations.
