@@ -32,7 +32,13 @@ The details of these algorithms are discussed in the following papers.
 >
 >[3] Terris, M., Tang, C., Jackson, A., & Wiaux, Y., [The AIRI plug-and-play algorithm for image reconstruction in radio-interferometry: variations and robustness](https://arxiv.org/abs/2312.07137v3), 2024, *preprint arXiv:2312.07137v3.* 
 
+We provide a [tutorial](./tutorial_usara_matlab.mlx) in the format of MATLAB live script as a quick start guide about how to run the scripts in this repository, from setting up the environment to imaging RI measurements. It can also be viewed online [here](https://basp-group.github.io/BASPLib/uSARA_tutorial.html).
+
+
+We provide tutorials in the format of Jupyter notebook for both AIRI and uSARA as a quick start guide about how to run the scripts of this repository.
+
 We also point the readers to [AIRI](https://github.com/basp-group/AIRI) and [uSARA](https://github.com/basp-group/uSARA) repositories for their MATLAB implementations.
+
 
 ## Dependencies 
 
@@ -41,7 +47,7 @@ This repository relies on two packages:
 1. [`RI Measurement Operator`](https://github.com/basp-group/RI-measurement-operator/tree/python) for the python implementation of radio-interferometric measurement operator;
 2. [`PyTorch Wavelet Toolbox`](https://github.com/v0lta/PyTorch-Wavelet-Toolbox) for SARA wavelet dictionary.
 
-These packages associate with the following publications
+These packages are associated with the following publication:
 
 
 >[4] Wolter, M., Blanke, F., Garcke, J., & Hoyt, C. T., [ptwt-The PyTorch Wavelet Toolbox](https://www.jmlr.org/papers/v25/23-0636.html). *JLMR*, 25(80), 1-7. 2024.
@@ -72,7 +78,7 @@ Next, edit the `.gitmodules` file, replacing the `https` addresses with the `git
 
 Finally, follow the instructions in the next session [Updating submodules (optional)](#updating-submodules-optional) to clone the submodule into the repository's path.
 
-The full path to the Small Scale RI Imaging repository is referred to as `$SSRI` in the rest of the documentation.
+The full path to this repository is referred to as `$SSRI` in the remainder of the documentation.
 
 ### Updating submodules (optional)
 
@@ -89,7 +95,7 @@ git submodule update --remote --merge   # fetch and merge latest state of the su
 If you'd like to use our trained AIRI denoisers, you can find the ONNX files on [Heriot-Watt Research Portal](https://doi.org/10.17861/aa1f43ee-2950-4fce-9140-5ace995893b0). You should download `v1_airi_astro-based_oaid_shelf.zip` and `v1_airi_mri-based_mrid_shelf.zip`, then copy the unzipped folders to ``$SSRI/airi_denoisers/`` folder of this repository. Alternatively, make sure to update the full paths to the DNNs in the `.csv` file of the denoiser shelf.
 
 ### Python environment
-We recommend to start by creating virtual environment with python version higher than 3.11 using management tools such as ``conda`` or ``venv``. Users should then refer to [PyTorch official website](https://pytorch.org) for the proper command to install the PyTorch version that fits your system. Finally, install other required packages using the following command:
+We recommend to start by creating virtual environment with Python version higher than 3.11 using management tools such as ``conda`` or ``venv``. Refer to [PyTorch official website](https://pytorch.org) for the proper command to install the adequate PyTorch version. Finally, install other required packages using the following command:
 
 ```bash
 pip install -r requirements.txt
