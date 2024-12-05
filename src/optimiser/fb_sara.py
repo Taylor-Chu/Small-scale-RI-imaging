@@ -11,7 +11,10 @@ from astropy.io import fits
 
 from .forward_backward import ForwardBackward
 from ..prox_operator import ProxOpSARAPos
-from ..ri_measurement_operator.pysrc.measOperator import MeasOpNUFFT, MeasOpPSF
+from ..ri_measurement_operator.pysrc.measOperator import MeasOpNUFFT
+from ..ri_measurement_operator.pysrc.measOperator.meas_op_PSF import (
+    MeasOpPSF,
+)
 
 
 class FBSARA(ForwardBackward):

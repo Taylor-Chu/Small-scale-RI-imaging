@@ -7,12 +7,6 @@ import torch
 import numpy as np
 from astropy.io import fits
 
-from .ri_measurement_operator.pysrc.measOperator import (
-    MeasOpPytorchFinufft,
-    MeasOpPynufft,
-    MeasOpTkbNUFFT,
-    MeasOpPSF,
-)
 from .prox_operator import ProxOpAIRI, ProxOpElipse, ProxOpSARAPos
 from .optimiser import FBAIRI, PDAIRI, FBSARA
 from .utils import gen_imaging_weight
@@ -60,6 +54,10 @@ def imager(param_optimiser: Dict, param_measop: Dict, param_proxop: Dict) -> Non
 
     meas_op = None
     if param_measop["nufft_package"] == "pynufft":
+        from .ri_measurement_operator.pysrc.measOperator.meas_op_nufft_pynufft import (
+            MeasOpPynufft,
+        )
+
         meas_op = MeasOpPynufft(
             data["u"],
             data["v"],
@@ -72,6 +70,10 @@ def imager(param_optimiser: Dict, param_measop: Dict, param_proxop: Dict) -> Non
             dtype=param_measop["dtype"],
         )
     elif param_measop["nufft_package"] == "tkbnufft":
+        from .ri_measurement_operator.pysrc.measOperator.meas_op_nufft_tkbn import (
+            MeasOpTkbNUFFT,
+        )
+
         meas_op = MeasOpTkbNUFFT(
             data["u"],
             data["v"],
@@ -85,6 +87,10 @@ def imager(param_optimiser: Dict, param_measop: Dict, param_proxop: Dict) -> Non
             dtype=param_measop["dtype"],
         )
     else:
+        from .ri_measurement_operator.pysrc.measOperator.meas_op_nufft_pytorch_finufft import (
+            MeasOpPytorchFinufft,
+        )
+
         meas_op = MeasOpPytorchFinufft(
             data["u"],
             data["v"],
@@ -97,6 +103,10 @@ def imager(param_optimiser: Dict, param_measop: Dict, param_proxop: Dict) -> Non
 
     meas_op_approx = None
     if param_optimiser["approx_meas_op"]:
+        from .ri_measurement_operator.pysrc.measOperator.meas_op_PSF import (
+            MeasOpPSF,
+        )
+
         meas_op_approx = MeasOpPSF(
             data["u"],
             data["v"],
