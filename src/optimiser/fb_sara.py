@@ -49,13 +49,16 @@ class FBSARA(ForwardBackward):
             meas (torch.Tensor): The measurements to be used in the algorithm.
             meas_op (MeasOpTkbnRI): The measurement operator.
             prox_op (ProxOpSARAPos): The proximal operator.
-            im_min_itr (int, optional): The minimum number of iterations. Defaults to 30.
-            im_max_itr (int, optional): The maximum number of iterations. Defaults to 2000.
-            im_var_tol (float, optional): The tolerance for image variation. Defaults to 1e-5.
+            im_min_itr (int, optional): The minimum number of inner loop iterations.
+                Defaults to 30.
+            im_max_itr (int, optional): The maximum number of inner loop iterations.
+                Defaults to 2000.
+            im_var_tol (float, optional): The tolerance for inner loop image variation.
+                Defaults to 1e-5.
             heu_reg_scale (float, optional): The heuristic regularization scale. Defaults to 1.0.
-            im_max_itr_outer (int, optional): The maximum number of outer iterations.
+            im_max_itr_outer (int, optional): The maximum number of outer loop iterations.
                 Defaults to 20.
-            im_var_tol_outer (float, optional): The tolerance for outer image variation.
+            im_var_tol_outer (float, optional): The tolerance for outer loop image variation.
                 Defaults to 1e-4.
             save_pth (str, optional): The path to save the results. Defaults to "results".
             file_prefix (str, optional): The prefix of the saving files. Defaults to "".

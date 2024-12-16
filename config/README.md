@@ -49,9 +49,9 @@ The configuration file is composed by three parts, i.e. Main, General and Denois
         - ``heu_reg_param_scale``(optional): Adjusting factor applied to the regularisation parameter calculated based on the heuristic noise levels. Default: ``1.0``.
         - ``reweighting``: Enable reweighting algorithm.  Default: ``true``.
         - ``approx_meas_op``(optional): Use approximate measurement operator during reconstruction. Default: ``false``.
-        - ``im_min_inner_itr``(optional): Minimum number of iterations in the forward-backward algorithm (inner loop). Default: ``10``.
-        - ``im_max_inner_itr``(optional): Maximum number of iterations in the forward-backward algorithm (inner loop). Default: ``2000``.
-        - ``im_var_inner_tol``(optional): Tolerance on the relative variation of the estimation in the forward-backward algorithm (inner loop) to indicate convergence. Default: ``1e-4``.
+        - ``im_min_itr``(optional): Minimum number of iterations in the forward-backward algorithm (inner loop). Default: ``10``.
+        - ``im_max_itr``(optional): Maximum number of iterations in the forward-backward algorithm (inner loop). Default: ``2000``.
+        - ``im_var_tol``(optional): Tolerance on the relative variation of the estimation in the forward-backward algorithm (inner loop) to indicate convergence. Default: ``1e-4``.
         - ``im_max_outer_itr``(optional): Maximum number of iterations in the reweighting algorithm (outer loop).  Default: ``10``.
         - ``im_var_outer_tol``(optional): Tolerance on the relative variation of the estimation in the reweighting algorithm (outer loop) to indicate convergence. Default: ``1e-4``.
         - ``itr_save``(optional): Interval of iterations for saving intermediate results. Default: ``500``.
