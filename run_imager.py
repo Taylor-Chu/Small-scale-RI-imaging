@@ -111,7 +111,7 @@ def parsing_parameters(
                 param[k] = v
 
     # load general parameters
-    list_keys = ["flag", "weighting", "computing", "nufft"]
+    list_keys = ["flag", "weighting", "computing", "nufft", "ROP"]
     if param["algorithm"] == "airi":
         list_keys.extend(["airi", "airi_default"])
     elif param["algorithm"] == "cairi":
